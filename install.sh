@@ -1,5 +1,5 @@
 sudo apt-get update
-sudo apt-get install build-essential libssl-dev | Y
+sudo apt-get install build-essential libssl-dev
 
 curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh -o install_nvm.sh
 
