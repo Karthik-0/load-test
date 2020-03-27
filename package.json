@@ -1,0 +1,17 @@
+{
+  "name": "load-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "faker": "^4.1.0",
+    "puppeteer": "^2.1.1",
+    "puppeteer-loadtest": "^1.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "puppeteer-loadtest --file=index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
