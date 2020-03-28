@@ -24,7 +24,8 @@ async function run () {
     const cluster = await Cluster.launch({
         concurrency: Cluster.CONCURRENCY_CONTEXT,
         maxConcurrency: 100,
-        monitor: true
+        monitor: true,
+        args: ['--no-sandbox']
     });
 
     await cluster.task(async ({ page }) => {
