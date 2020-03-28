@@ -25,7 +25,7 @@ async function run () {
         concurrency: Cluster.CONCURRENCY_CONTEXT,
         maxConcurrency: 100,
         monitor: true,
-        args: ['--no-sandbox']
+        puppeteerOptions: {args: ['--no-sandbox']}
     });
 
     await cluster.task(async ({ page }) => {
