@@ -6,6 +6,7 @@
   "dependencies": {
     "faker": "^4.1.0",
     "puppeteer": "^2.1.1",
+    "puppeteer-cluster": "^0.20.0",
     "puppeteer-loadtest": "^1.0.7"
   },
   "devDependencies": {},

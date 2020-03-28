@@ -1,11 +1,8 @@
+const { Cluster } = require('puppeteer-cluster');
 const puppeteer = require('puppeteer');
 const faker = require('faker');
 
-// const url = process.argv[2];
 const url = "https://live.testpress.in/b/kar-pad-muz";
-if (!url) {
-    throw "Please provide URL as a first argument";
-}
 
 async function run () {
     console.log("Starting test")
@@ -22,4 +19,24 @@ async function run () {
     console.log(`${name} left the conference`)
     browser.close();
 }
-run();
+
+(async () => {
+    const cluster = await Cluster.launch({
+        concurrency: Cluster.CONCURRENCY_CONTEXT,
+        maxConcurrency: 100,
+        monitor: true
+    });
+
+    await cluster.task(async ({ page }) => {
+        run()
+        // Store screenshot, do something else
+    });
+
+    for (var i=0;i <40; i ++) {
+        cluster.queue();
+    }
+    // many more pages
+
+    await cluster.idle();
+    await cluster.close();
+})();
