@@ -8,7 +8,7 @@ const url = "https://live.testpress.in/b/kar-pad-muz";
     const cluster = await Cluster.launch({
         concurrency: Cluster.CONCURRENCY_CONTEXT,
         maxConcurrency: 100,
-        puppeteerOptions: {args: ['--no-sandbox'], headless:false}
+        puppeteerOptions: {args: ['--no-sandbox'], headless:true}
     });
 
     await cluster.task(async ({ page }) => {
