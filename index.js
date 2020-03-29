@@ -10,7 +10,7 @@ if (!url) {
 
 async function run () {
     console.log("Starting test")
-    const browser = await puppeteer.launch({args: ['--no-sandbox'], headless: false});
+    const browser = await puppeteer.launch({args: ['--no-sandbox'], headless: true});
     const page = await browser.newPage();
     const name = faker.name.findName();
     await page.goto(url);
