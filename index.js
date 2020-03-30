@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 const faker = require('faker');
 
 // const url = process.argv[2];
-const roomId = "kar-pad-muz"
+const roomId = "kar-4yh-jru"
 const url = `https://live.testpress.in/b/${roomId}`;
 if (!url) {
     throw "Please provide URL as a first argument";
