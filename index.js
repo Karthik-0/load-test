@@ -21,7 +21,7 @@ async function run () {
     await page.click('.col-lg-6 > form > .input-group > .input-group-append > .btn')
     console.log(`${name} Successfully joined in conference`)
 
-    await page.waitFor(600000)
+    await page.waitFor(6000000)
     console.log(`${name} left the conference`)
     browser.close();
 }
