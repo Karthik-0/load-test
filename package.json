@@ -11,7 +11,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "puppeteer-loadtest --file=index.js -s 1 -c 110"
+    "test": "puppeteer-loadtest --file=index.js -s 1 -c 30"
   },
   "author": "",
   "license": "ISC"
